@@ -14,8 +14,33 @@ void spray(char byte) {
 	return;
 };
 
+void w_byte(int loc, char byte) {
+	char buffer[1];
+	
+	buffer[0] = byte;
+	location = loc + 0xfa0;
+	
+	printc(buffer, video[loc + 0xfa0 + 1]);
+	clear_screen();
+	
+	return;
+};
+
+int kernel_test() {
+	w_byte(0x5, 'A');
+	
+	clear_screen();
+	
+	if (video[0xfa5] == 'A') {
+		return 1;
+	};
+	
+	return 0;
+};
+
+
 void demo() {
-	spray(0x42);
+	write_byte((0x1000 - 0x7d0), 0x42);
 	
 	clear_screen();
 	
