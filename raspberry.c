@@ -1,6 +1,7 @@
 // Raspberry
 // This is a PoC that exploits Raspberry, to allow arbitrary memory r/w.
-// Currently it only sprays bytes, but I will add memory r/w to ANYWHERE; at some point. 
+// It allows you to spray the stack with bytes, or write to arbitrary locations in memory using w_byte. 
+// Writeup in WRITEUP.md.
 
 void spray(char byte) {
 	char buffer[0x20000];
