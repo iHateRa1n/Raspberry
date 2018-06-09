@@ -75,6 +75,29 @@ Step 4. Run printc, and write each character with an even position, (0, 2, 4, et
 
 Step 5. Clear the screen with clear_screen. 
 
+# USAGE
+
+Include the raspberry.c code inside of the kernel, or inside of your own application.
+
+ENSURE YOU ARE ON A KERNEL VERSION LESS THAN 0.0.8, SIMPLY DOWNLOAD 0.0.7, COMPILE IT, AND INSTALL IT. 
+
+Now, you can run w_byte to write to kernel memory. 
+
+Demo:
+
+```c
+w_byte(0xf, 'A'); // write to address 0xb8faf (0xb8fa0 + the first argument) the byte 'A'
+w_byte(0x41, '\x00') // write to address 0xb8ff0 (0xb8fa0 + the first argument, 0x41) the byte '\x00' (null)
+
+// test if you can patch the kernel
+if (!kernel_test()) {
+	// if you can't patch the kernel
+}
+else {
+	// if you can patch the kernel
+};
+```
+
 # Shoutouts
 
 [@billyellis](https://github.com/billyellis), for his awesome YouTube channel on iOS Security Research, which I learned a lot from. 
