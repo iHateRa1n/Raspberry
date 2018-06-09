@@ -77,6 +77,6 @@ Step 5. Clear the screen with clear_screen.
 
 # Shoutouts
 
-@billyellis, for his awesome YouTube channel on iOS Security Research, which I learned a lot from. 
+[@billyellis](https://github.com/billyellis), for his awesome YouTube channel on iOS Security Research, which I learned a lot from. 
 
-@kpwn, also known as qwertyoruiop / qwertyoruiopz; for iOS jailbreaks like Yalu and Yalu102. 
+[@kpwn](https://github.com/kpwn), also known as qwertyoruiop / qwertyoruiopz; for iOS jailbreaks like Yalu and Yalu102. 
