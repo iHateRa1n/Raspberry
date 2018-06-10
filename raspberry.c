@@ -38,14 +38,3 @@ int kernel_test() {
 	
 	return 0;
 };
-
-
-void demo() {
-	write_byte((0x1000 - 0x7d0), 0x42);
-	
-	clear_screen();
-	
-	if (video[0x1000] = 0x42) {
-		printf("success: sprayed byte 0x42 over stack");
-	};
-};
